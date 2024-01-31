@@ -1,7 +1,7 @@
 import re
 
 events=[]
-
+# This is the function that asks adds and validates the date
 def date():
     print("enter the date")
     date = input()
@@ -11,6 +11,7 @@ def date():
     return date
 
 
+# This is the function that asks adds and validates the time
 def time():
     print("Enter the time")
     time = input()
@@ -20,6 +21,7 @@ def time():
     return time
 
 
+#this is the function that adds the event it asks for user input 
 def add_event():
     details = []
     print("ad the title")
@@ -28,7 +30,6 @@ def add_event():
     description = input()
     the_date = date()
     the_time = time()
-
     details.append(title)
     details.append(description)
     details.append(the_date)
@@ -37,6 +38,7 @@ def add_event():
     return details
 
 
+#this displays all the events that were added
 def Display():
     count = 0
     while count < len(events):
@@ -45,6 +47,7 @@ def Display():
     return 0
 
 
+#this function deletes the specified event
 def Delete():
     counter = 0
     pop_notify = 0
@@ -61,6 +64,9 @@ def Delete():
         print("The event does not exist")
     return 0
 
+
+'''here the running of the program to exit just type the word exit
+    at the next prompt '''
 if __name__ == "__main__":
     
     print("PRESS exit TO EXIT")
@@ -83,5 +89,3 @@ if __name__ == "__main__":
             print(Display())
         if answer2 == 'd':
             Delete()
-    # Delete()
-    # print(Display())
